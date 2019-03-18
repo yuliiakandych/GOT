@@ -113,7 +113,16 @@ main {
 {
 	display: block;
 }
+ .lightbox-close
+ {
+ 	position: absolute;
+ 	color: white;
+ 	font-size:12rem;
+ 	right: 12px;
+ 	top: 12px;
+ 	cursor: pointer;
 
+ }
 
 
 
