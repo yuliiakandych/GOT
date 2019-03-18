@@ -4,8 +4,9 @@
 
 	const 	sigils = document.querySelectorAll('.sigil-container'),
 			lightbox = document.querySelector('.lightbox'),
-			video = document.querySelector('video');
-			lbClose = document.querySelector('.lightbox-close');
+			video = document.querySelector('video'),
+			lbClose = document.querySelector('.lightbox-close'),
+			topBanners = document.querySelector('#houseImages')
 
 	function toggleLightbox() {
 		// debugger;
@@ -32,7 +33,20 @@
 		video.pause();
 	}
 
-	sigils.forEach(sigil => sigil.addEventListener('click', toggleLightbox));
+	function animateBanners() {
+		// move the banners to the left so that the current house banner is visable
+		const offSet = 600;
+		// grab the data-offset number from the shield we're clicking on and than do a bit of match 
+		let currentOffset = this.dataset.offset * offSet;
+
+		topBanners.style.right = currentOffset + "px";
+	}
+
+
+	// sigils.forEach(sigil => sigil.addEventListener('click', toggleLightbox));
+	
+    // animate the banners at the top
+	sigils.forEach(sigil => sigil.addEventListener('click', animateBanners));
 
 	video.addEventListener('ended', closeLightbox);
 	lbClose.addEventListener('click', closeLightbox);
