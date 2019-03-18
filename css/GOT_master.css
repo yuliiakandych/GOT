@@ -51,7 +51,7 @@ main {
 /* ----- end default styles ----- */
 
 /* ----- image sprite ----- */
-.sigilContainer {
+.sigil-container {
 	width:51px;
 	height:54px;
 	display:inline-block;
@@ -97,6 +97,23 @@ main {
 }
 
 /* add styles here for lightbox and video */
+.lightbox
+{
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.9);
+	height: 100%;
+	display:none; 
+}
+
+
+.lightbox-on
+{
+	display: block;
+}
+
 
 
 
