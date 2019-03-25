@@ -39,7 +39,8 @@
 		// grab the data-offset number from the shield we're clicking on and than do a bit of match 
 		let currentOffset = this.dataset.offset * offSet;
 
-		topBanners.style.right = currentOffset + "px";
+		// topBanners.style.right = currentOffset + "px";
+		
 	}
 
 
