@@ -40,7 +40,7 @@
 		let currentOffset = this.dataset.offset * offSet;
 
 		// topBanners.style.right = currentOffset + "px";
-		
+		TweenMax.to(topBanners, 0.7)
 	}
 
 
