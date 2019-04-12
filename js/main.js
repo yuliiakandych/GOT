@@ -75,6 +75,9 @@
 		tagline.innerHTML = `House &nbsp ${houseData[this.dataset.offset][0]}` ;
 		houseInfo.innerHTML = houseData[this.dataset.offset][1];
 
+		
+	}
+
 		let animation = TweenMax.to(topBanners,1, {
 		ease:Linear.easeNone, right: currentOffset,
 		//animation end function
@@ -93,7 +96,7 @@
 		
 	}
 
-	//animate the banners at the top
+
 	sigils.forEach(sigil => sigil.addEventListener('click', animateBanners))
 
 	lbClose.addEventListener('click', closeLightBox)
