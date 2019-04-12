@@ -10,6 +10,12 @@
 /* ----- end custom font ----- */
 
 /* ----- default styles ----- */
+
+.hidden
+{
+	display: none;
+}
+
 body { background-image:url(../images/grungeBG.jpg);
 	background-repeat:no-repeat; background-position:center center;
 	background-color:#000000; font-size:16px; }
@@ -22,10 +28,13 @@ h1 {
 }
 
 main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	position:relative;
 	width:100%;
-	text-align:center;
-	top:30px;
+	text-align: center;
+	top:3vh;
 }
 
 #imageContainer {
@@ -36,7 +45,43 @@ main {
 	overflow:hidden;
 }
 
-#houseImages { position:relative; width:4000px; transition: all .5s; }
+#thronesTitle {
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	justify-content: center;
+}
+
+#thronesTitle img{
+	margin: 40px 40px;
+	max-width: 500px;
+}
+
+.flippedImg {
+	-moz-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+
+.house-name {
+	font-size: 2.5em;
+	padding-bottom: 40px;
+}
+
+.house-info {
+	color: #fff;
+	margin: 20px auto;
+	font-size: 1.3em;
+	padding: 0px 150px;
+	line-height: 1.5em;
+	text-align: justify;
+	max-width: 960px;
+	margin-bottom: 100px;
+}
+
+#houseImages { position:relative; width:4000px; /*transition: all .5s;*/ }
 #houseImages img { float:left; }
 
 #bottomNav { margin-top:30px; }
@@ -58,9 +103,9 @@ main {
 	overflow:hidden;
 	background-image:url(../images/GOT_sprites.png);
 	background-repeat:no-repeat;
-	transition:transform .3s;
+	/*transition:transform .3s;
 	-webkit-transition:-webkit-transform .3s;
-	-moz-transition:-moz-transform .3s;
+	-moz-transition:-moz-transform .3s;*/
 }
 
 .stark { background-position:0px -54px; }
@@ -103,7 +148,7 @@ main {
 	text-align: center;
 	width: 100%;
 	top: 0;
-	background-color: rgba(0, 0, 0, 0.9);
+	background-color: rgba(0, 0, 0, 1);
 	height: 100%;
 	display:none; 
 }
@@ -113,21 +158,32 @@ main {
 {
 	display: block;
 }
+
  .lightbox-close
  {
  	position: absolute;
- 	color: white;
- 	font-size:12rem;
- 	right: 12px;
- 	top: 12px;
- 	cursor: pointer;
+	color: white;
+	font-size: 2rem;
+	cursor: pointer;
+	right: 12px;
 
  }
 
+.house-info
+{
+	color: white;
+	width: 70%;
+	margin: 0 auto;
+	padding: 40px;
+	font-size: 25px;
+	text-align: center;
+	line-height: 1.5em;
 
+
+}
 
 video {
-	width: 80%;
-	margin-top: 10%;
+	width: 70%;
+	margin-top: 6%;
 	border: thin solid #949393;
 }
