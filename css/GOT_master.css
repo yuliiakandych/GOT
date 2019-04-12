@@ -34,7 +34,7 @@ main {
 	position:relative;
 	width:100%;
 	text-align: center;
-	top:10vh;
+	top:3vh;
 }
 
 #imageContainer {
@@ -66,7 +66,8 @@ main {
 
 
 .house-name {
-	font-size: 1.5em;
+	font-size: 2.5em;
+	padding-bottom: 40px;
 }
 
 .house-info {
@@ -102,9 +103,9 @@ main {
 	overflow:hidden;
 	background-image:url(../images/GOT_sprites.png);
 	background-repeat:no-repeat;
-	transition:transform .3s;
+	/*transition:transform .3s;
 	-webkit-transition:-webkit-transform .3s;
-	-moz-transition:-moz-transform .3s;
+	-moz-transition:-moz-transform .3s;*/
 }
 
 .stark { background-position:0px -54px; }
@@ -174,14 +175,15 @@ main {
 	width: 70%;
 	margin: 0 auto;
 	padding: 40px;
-	font-size: 30px;
+	font-size: 25px;
 	text-align: center;
-	line-height: 2em;
+	line-height: 1.5em;
+
 
 }
 
 video {
-	width: 80%;
-	margin-top: 10%;
+	width: 70%;
+	margin-top: 6%;
 	border: thin solid #949393;
 }

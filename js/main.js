@@ -1,14 +1,14 @@
 (() => {
 	// styb
-	console.log("fired");
+	console.log("la-la-la");
 
-	const	sigils = document.querySelectorAll(".sigil-container");
-			lightbox = document.querySelector('.lightbox')
-			video = document.querySelector('video')
-			lbClose = document.querySelector(".lightbox-close")
-	    	topBanners = document.querySelector("#houseImages")
-	    	tagline = document.querySelector('.house-name')
-	    	houseInfo = document.querySelector('.house-info')
+	const	sigils = document.querySelectorAll(".sigil-container"),
+			lightbox = document.querySelector('.lightbox'),
+			video = document.querySelector('video'),
+			lbClose = document.querySelector(".lightbox-close"),
+	    	topBanners = document.querySelector("#houseImages"),
+	    	tagline = document.querySelector('.house-name'),
+	    	houseInfo = document.querySelector('.house-info');
 
 	const houseData = [
 		["STARK", `House Stark of Winterfell is a Great House of Westeros, ruling over the vast region known as the North from their seat in Winterfell. It is one of the oldest lines of Westerosi nobility by far, claiming a line of descent stretching back over eight thousand years. Before the Targaryen conquest, as well as during the War of the Five Kings and Daenerys Targaryen's invasion of Westeros, the leaders of House Stark ruled over the region as the Kings in the North.`],
@@ -49,7 +49,7 @@
 		// delay the video to play
 		setTimeout( function(){
 				lightbox.classList.add('lightbox-on'
-			)},500);
+			)},3500);
 		
 		
 		video.load();
@@ -59,7 +59,7 @@
 
 
 	function closeLightBox(){
-		lightbox.classList.remove('lightbox-on')
+		lightbox.classList.remove('lightbox-on');
 
 		//rewind the current video and pause it
 		video.currentTime = 0;
@@ -73,20 +73,32 @@
 		let currentOffset = this.dataset.offset * offSet;
 
 		tagline.innerHTML = `House &nbsp ${houseData[this.dataset.offset][0]}` ;
-		houseInfo.innerHTML = houseData[this.dataset.offset][1]
+		houseInfo.innerHTML = houseData[this.dataset.offset][1];
 
-		// topBanners.style.right = currentOffset + "px";
-		// TweenMax.to(topBanners, 0.7, {right: currentOffset});
+		let animation = TweenMax.to(topBanners,1, {
+		ease:Linear.easeNone, right: currentOffset,
+		//animation end function
+		 onComplete:openLightbox,onCompleteParams:[this]}
+		);
+		console.log(this)
+
+		//set font size for house name
+		tagline.style.fontSize = "20px"
+
+		let textAnimation = TweenMax.to(tagline,1,{
+		fontSize: 40,ease:Elastic.easeOn
+		});
+
+	
+		
 	}
 
+	//animate the banners at the top
+	sigils.forEach(sigil => sigil.addEventListener('click', animateBanners))
 
-	// sigils.forEach(sigil => sigil.addEventListener('click', toggleLightbox));
-	
-    // animate the banners at the top
-// 	sigils.forEach(sigil => sigil.addEventListener('click', animateBanners));
+	lbClose.addEventListener('click', closeLightBox)
+	video.addEventListener("ended", closeLightBox)
 
-// 	video.addEventListener('ended', closeLightbox);
-// 	lbClose.addEventListener('click', closeLightbox);
+})();
 
 
-// })();
