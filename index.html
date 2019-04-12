@@ -6,6 +6,8 @@
 <link href="css/meyerReset.css" rel="stylesheet" type="text/css" media="screen">
 <link href="css/GOT_master.css" rel="stylesheet" type="text/css" media="screen">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"></script>
+
 </head>
 
 <body>
@@ -34,17 +36,31 @@
         </ul>
     </nav>
 
-    <h1>clever tagline goes here</h1><!-- replace this with the house name -->
+    <!-- replace this with the house name -->
+    <h1 class="house-name">Game of Thrones</h1>
 
-    <p class="house-info"></p><!-- replace this with house details (github gist) -->
+<!-- replace this with house details (github gist) -->
+    <h3 class="house-info">
+        <img src="images/shield-with-swords.svg" width="25" height="25"/>
+        Click on the shields to learn more.
+        <img src="images/shield-with-swords.svg" width="25" height="25"/>
+    </h3>
 </main>  <!--end mainContainer-->
 
 <!-- add a lightbox here -->
 <section class="lightbox">
-    <span class="lightbox-close">X</span>
+    <span class="lightbox-close">x</span>
     <video src="video/House-Stark.mp4" muted autoplay controls></video>
+    <!-- video controls 
+        <div id="video-controls">
+            <button type="button" id="play-pause">Pause</button>
+            <input type="range" id="time-bar" value="0">
+            <button type="button" id="mute">Mute</button>
+            <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="0">
+            <button type="button" id="full-screen">Full-Screen</button>
+      </div> -->
 </section>
 
-<script src="js/GOT_master.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
