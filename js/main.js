@@ -26,7 +26,7 @@
 		["TARGERYEN",`House Targaryen of Dragonstone is a Great House of Westeros and was the ruling royal House of the Seven Kingdoms for three centuries since it conquered and unified the realm, before it was deposed during Robert's Rebellion and House Baratheon replaced it as the new royal House. The few surviving Targaryens fled into exile to the Free Cities of Essos across the Narrow Sea. Currently based on Dragonstone off of the eastern coast of Westeros, House Targaryen seeks to retake the Seven Kingdoms from House Lannister, who formally replaced House Baratheon as the royal House following the destruction of the Great Sept of Baelor.`],
 		["FREY",`House Frey of the Twins was the Great House of the Riverlands, having gained their position for their treachery against their former liege lords, House Tully, who were stripped of all their lands and titles for their rebellion against the Iron Throne; House Tully had supported the independence movement for the Kingdom of the North. The current head of the house is unknown following the assassinations of Lord Walder Frey and two of his sons, Lothar Frey and Walder Rivers, by the vengeful Arya Stark. This is made more complex by the subsequent assassination of all the male Freys soon after.`]
 
-	]
+	];
 
 
 
@@ -75,8 +75,6 @@
 		tagline.innerHTML = `House &nbsp ${houseData[this.dataset.offset][0]}` ;
 		houseInfo.innerHTML = houseData[this.dataset.offset][1];
 
-		
-	}
 
 		let animation = TweenMax.to(topBanners,1, {
 		ease:Linear.easeNone, right: currentOffset,
@@ -85,14 +83,11 @@
 		);
 		console.log(this)
 
-		//set font size for house name
-		tagline.style.fontSize = "20px"
+		tagline.style.fontSize = "20px";
 
 		let textAnimation = TweenMax.to(tagline,1,{
 		fontSize: 40,ease:Elastic.easeOn
 		});
-
-	
 		
 	}
 
